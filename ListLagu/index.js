@@ -17,7 +17,7 @@ function generateSound(status){
     }
     for(let i=0;i<track.length;i++){
     	var item = document.createElement('li');
-        item.appendChild(document.createTextNode(track[i]["path"]));
+        item.appendChild(document.createTextNode(track[i]["nama"]));
         item.id= track[i]["nama"];
         item.onclick=function(){switchLagu(track[i]["path"])};
         console.log(item);        
@@ -34,11 +34,10 @@ function generateSound(status){
 
 function generateFav(){
     var listSound=document.getElementById("fav");
-    //listSound=document.getElementById("fav");
     listSound.innerHTML="";
     for(let i=0;i<fav.length;i++){
     	var item = document.createElement('li');
-        item.appendChild(document.createTextNode(fav[i]["path"]));
+        item.appendChild(document.createTextNode(fav[i]["nama"]));
         item.id= fav[i]["nama"];
         item.onclick=function(){switchLagu(fav[i]["path"])};
         console.log(item);
@@ -76,7 +75,6 @@ function unsub(){
     return track;
 }
 function favorite(title){
-    //var listSound=document.getElementById("track");
     for(let i=0;i<track.length;i++){
         if(track[i]["nama"]==title){
             fav.push(track.splice(i, 1)[0]);
@@ -89,7 +87,6 @@ function favorite(title){
 }
 
 function unfavorite(title){
-    //var listSound=document.getElementById("track");
     for(let i=0;i<fav.length;i++){
         if(fav[i]["nama"]==title){
             track.push(fav.splice(i, 1)[0]);
@@ -102,10 +99,13 @@ function unfavorite(title){
 }
 
 function switchLagu(link){
+    let audio=document.getElementById("audio");
     let mp3player=document.getElementById("trackplayer2");
     mp3player.src=link;
+
+    audio.load();
 }
-const lagu=[{"nama":"s1","path":"s1.mp3"},{"nama":"s2","path":"s2.mp3"},{"nama":"s3","path":"s3.mp3"}];
+const lagu=[{"nama":"bongo","path":"media/bongo.mp3"},{"nama":"s2","path":"media/s2.mp3"},{"nama":"s3","path":"media/s3.mp3"}];
 const laguSub=[{"nama":"s1full","path":"s1full.mp3"},{"nama":"s2full","path":"s2full.mp3"},{"nama":"s3full","path":"s3full.mp3"}];
 
 let fav=[];
