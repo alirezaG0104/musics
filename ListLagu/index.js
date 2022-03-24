@@ -25,7 +25,7 @@ function generateSound(status){
         var icon= document.createElement('img');
         icon.src="media/pngwing.com.png";
         icon.className="icon";
-        icon.onclick=function(){favorite(item.id)};
+        icon.onclick=function(){favorite(track[i]["nama"])};
         listSound.append(icon);
     }   
     
@@ -46,7 +46,7 @@ function generateFav(){
         var icon= document.createElement('img');
         icon.src="media/pngwing.com.png";
         icon.className="icon";
-        icon.onclick=function(){unfavorite(item.id)};
+        icon.onclick=function(){unfavorite(fav[i]["nama"])};
         listSound.append(icon);
     }    
     return fav;
