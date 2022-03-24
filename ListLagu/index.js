@@ -74,6 +74,19 @@ function unsub(){
     generateFav();
     return track;
 }
+function subscribe(){
+    if(!localStorage.getItem('sub')){
+        localStorage.setItem('sub',true);
+    }else{
+        if(localStorage.getItem('sub')){
+            localStorage.setItem('sub',false);
+            unsub();
+        }else{
+            localStorage.setItem('sub',true);
+            generateSound("sub");
+        }
+    }
+}
 function favorite(title){
     for(let i=0;i<track.length;i++){
         if(track[i]["nama"]==title){
