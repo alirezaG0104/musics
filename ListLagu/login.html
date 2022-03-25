@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
   <title>Musics</title>
   <link rel="stylesheet" href="style.css">
   <style>
@@ -17,9 +19,9 @@
     }
 
     .kontener {
-      background-image: url("./image/image.png");
+      background-image: url("./media/image.png");
       background-size: 100% 100%;
-      height: 100vh;
+      height: 115vh;
     }
 
     .kartu {
@@ -30,90 +32,124 @@
       font-family: 'Lobster', cursive;
       font-size: 50px;
     }
-    #form-login{
+
+    #form-login {
       display: none;
+      width: 400px;
+    }
+
+    #form-reg {
+      display: none;
+      width: 400px;
     }
   </style>
 </head>
 
 <body>
-        <div class="container" id="containermain" style="display:none">
-                <div class="navbar">
-        
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Subscribe</a></li>
-                        <li><a href="#">Product</a></li>
-                        <li><a href="#">Connect</a></li>
-                    </ul>
-                </div>
-                <div class="content">
-                    <div class="left-coloum">
-                        <h1>DAFTAR LAGU</h1>
-                        <ul id="track">
-                        </ul>
-                    </div>
-                    <div class="mid-coloum">
-                        <audio id="audio" controls="controls">
-                            <source id="trackplayer2" src="s2.mp3" type="audio/mpeg">
-                          Your browser does not support the audio element.
-                          </audio>
-                    </div>
-                    <div class="right-coloum">
-                        <h1>DAFTAR FAVOURITE</h1>
-                        <ul id="fav">
-                        </ul>
-                </div>
-            </div>
-                </div>
-  <div id="logincontainer">
-  <div class="kontener container-fluid position-relative" style="padding-top: 200px;">
-    <div class="card text-dark mb-3 kartu border-0" style="max-width: 600px;">
-      <div class="card-header" style="background: none;">
-        <h3><strong>Yutub</strong></h3>
-      </div>
-      <div class="card-body">
-        <p class="card-title huruf-gaul">Mainkan Musik Sekarang</p>
-        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-          content.
-        </p> -->
-        <button type="button" class="btn" style="background-color: #f07969;" onclick="muncul()">
-          <strong>Login</strong>
-        </button>
-      </div>
-    </div>
-    <div id="form-login" class="position-absolute top-50 start-50 translate-middle">
-      <div class="card text-dark mb-3 kartu border-1" style="max-width: 600px;">
-        <div class="card-header" style="background: none;">
-          <h3><strong>Login</strong></h3>
-        </div>
+  <div class="kontainer" id="containermain" style="display:none">
+    <div class="navbar">
 
-        <div class="card-body">
-          <!-- <p class="card-title huruf-gaul">
-          </p> -->
-          <form target="dummyframe" onsubmit="login()" action="musik.html" method="POST">
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Username</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-            <button type="submit" class="btn btn-danger" onclick="tutup()">Batal</button>
-          </form>
-        </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Subscribe</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Connect</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="left-coloum">
+        <h1>DAFTAR LAGU</h1>
+        <ul id="track">
+        </ul>
+      </div>
+      <div class="mid-coloum">
+        <audio id="audio" controls="controls">
+          <source id="trackplayer2" src="s2.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="right-coloum">
+        <h1>DAFTAR FAVOURITE</h1>
+        <ul id="fav">
+        </ul>
       </div>
     </div>
   </div>
-</div>
+  <div id="logincontainer">
+    <div class="kontener container-fluid position-relative" style="padding-top: 200px;">
+      <div class="position-absolute top-0 end-0">
+        <button type="button" class="btn d-flex" style="background-color: #f07969; margin: 20px 20px 0px 0px"
+          onclick="muncul()">
+          <strong>Login</strong>
+        </button>
+      </div>
+      <div class="card text-dark mb-3 kartu border-0" style="max-width: 600px;">
+        <div class="card-header" style="background: none;">
+          <h3><strong>Yutub</strong></h3>
+        </div>
+        <div class="card-body">
+          <p class="card-title huruf-gaul">Mainkan Musik Sekarang</p>
+          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.
+        </p> -->
+          <button type="button" class="btn" style="background-color: #f07969;" onclick="munculReg()">
+            <strong>Daftar</strong>
+          </button>
+        </div>
+      </div>
+      <!-- Form Login -->
+      <div id="form-login" class="position-absolute top-50 start-50 translate-middle w3-animate-opacity">
+        <div class="card text-dark mb-3 kartu border-0 rounded" style="max-width: 600px; background-color: #ffb6c1;">
+          <div class="card-header" style="background: none;">
+            <h3><strong>Login</strong></h3>
+          </div>
+
+          <div class="card-body">
+            <form target="dummyframe" onsubmit="login()" action="musik.html" method="POST">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Username</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-danger" onclick="tutup()">Batal</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Registrasi -->
+      <div id="form-reg" class="position-absolute top-50 start-50 translate-middle w3-animate-opacity">
+        <div class="card text-dark mb-3 border-0 rounded" style="max-width: 600px; background-color: #ffb6c1;">
+          <div class="card-header" style="background: none;">
+            <h4><strong>Registrasi</strong></h4>
+          </div>
+
+          <div class="card-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"><strong>Username</strong></label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"><strong>Password</strong></label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-danger" onclick="tutupReg()">Batal</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 
   <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
   <!-- Optional JavaScript; choose one of the two! -->
@@ -128,48 +164,55 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
-    <script>
-      function muncul() {
-        document.getElementById('form-login').style.display = 'block';
-      }
+  <script>
+    function muncul() {
+      document.getElementById('form-login').style.display = 'block';
+    }
 
-      function tutup() {
-        document.getElementById('form-login').style.display = 'none';
-      }
+    function tutup() {
+      document.getElementById('form-login').style.display = 'none';
+    }
+    function munculReg() {
+      document.getElementById('form-reg').style.display = 'block';
+    }
 
-      function register(username,password){
-        localStorage.setItem("username", username);
-        localStorage.setItem("password", password);
-        console.log("FIIIIIREEEED"+username+"  "+password);
-      }
+    function tutupReg() {
+      document.getElementById('form-reg').style.display = 'none';
+    }
 
-      function login(){
-        let username=document.getElementById('exampleInputEmail1').value;
-        let password=document.getElementById('exampleInputPassword1').value;
-          
-        if(localStorage.getItem("username")&&localStorage.getItem("password")){
-            if(localStorage.getItem("password")==password&&localStorage.getItem("username")==username){
-                if(!localStorage.getItem("sub")){
-                    localStorage.setItem("user",username);
-                    localStorage.setItem("sub",false);
-                }                
-            }
-            else{
-                if(localStorage.getItem("username")==undefined){
-                    register(username,password);
-                    localStorage.setItem("user","User Baru");
-                }
-            }
-        }else{
-            register(username,password);
-            localStorage.setItem("user","User Baru");
-            //window.location.replace("musik.html")
+    function register(username, password) {
+      localStorage.setItem("username", username);
+      localStorage.setItem("password", password);
+      console.log("FIIIIIREEEED" + username + "  " + password);
+    }
+
+    function login() {
+      let username = document.getElementById('exampleInputEmail1').value;
+      let password = document.getElementById('exampleInputPassword1').value;
+
+      if (localStorage.getItem("username") && localStorage.getItem("password")) {
+        if (localStorage.getItem("password") == password && localStorage.getItem("username") == username) {
+          if (!localStorage.getItem("sub")) {
+            localStorage.setItem("user", username);
+            localStorage.setItem("sub", false);
+          }
         }
-        document.getElementById('logincontainer').style.display = 'none';
-        document.getElementById('containermain').style.display = 'block';       
+        else {
+          if (localStorage.getItem("username") == undefined) {
+            register(username, password);
+            localStorage.setItem("user", "User Baru");
+          }
+        }
+      } else {
+        register(username, password);
+        localStorage.setItem("user", "User Baru");
+        //window.location.replace("musik.html")
       }
-    </script>
-        <script src="index.js"></script>
+      document.getElementById('logincontainer').style.display = 'none';
+      document.getElementById('containermain').style.display = 'block';
+    }
+  </script>
+  <script src="index.js"></script>
 </body>
 
 </html>
