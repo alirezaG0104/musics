@@ -180,12 +180,13 @@ function initNama(){
 function logout(){
     init=false;
     unsub();
-    localStorage.clear()
+    localStorage.clear();
+    init=false;
     document.getElementById('containerlogin').style.display = 'block';
     document.getElementById('containermain').style.display = 'none'; 
     document.getElementById('emailHelp1').textContent="We'll never share your email with anyone else."; 
 }
-const lagu=[{"nama":"bongo","path":"media/bongo.mp3"},{"nama":"s2","path":"media/s2.mp3"},{"nama":"Metallica - Orion","path":"media/Metallica - Orion.mp4"}];
+const lagu=[{"nama":"bongo","path":"media/bongo.mp3"},{"nama":"s2","path":"media/s2.mp3"},{"nama":"Metallica - Orion","path":"media/Metallica - Orion (HD).mp4"}];
 const laguSub=[{"nama":"Coldplay - Fix You","path":"media/Coldplay - Fix You (Official Video).mp4"},{"nama":"AC_DC - Back In Black","path":"media/AC_DC - Back In Black (Official Video).mp4"},{"nama":"The Beatles - Let It Be","path":"media/The Beatles - Let It Be (Official Music Video).mp4"}];
 
 let fav=[];
@@ -218,7 +219,7 @@ let sub=localStorage.getItem('sub');
       document.getElementById('form-reg').style.display = 'none';
     }
 
-   function register() {
+    function register() {
         
       let username = document.getElementById('exampleInputEmail2').value;
       let password = document.getElementById('exampleInputPassword2').value;
