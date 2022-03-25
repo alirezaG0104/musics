@@ -218,18 +218,20 @@ let sub=localStorage.getItem('sub');
       document.getElementById('form-reg').style.display = 'none';
     }
 
-    function register() {
+   function register() {
+        
       let username = document.getElementById('exampleInputEmail2').value;
       let password = document.getElementById('exampleInputPassword2').value;
-      localStorage.setItem("username", username);
-      localStorage.setItem("password", password);
-      localStorage.setItem("user", "User Baru");
-      document.getElementById('containerlogin').style.display = 'none';
-      document.getElementById('containermain').style.display = 'block';
-      tutupReg();
-      initNama();
-      resetData();
-      //generateSound(localStorage.getItem('sub'));   
+      if(username.length!=0&&password.length!=0){
+        localStorage.setItem("username", username);
+        localStorage.setItem("password", password);
+        localStorage.setItem("user", "User Baru");
+        document.getElementById('containerlogin').style.display = 'none';
+        document.getElementById('containermain').style.display = 'block';
+        tutupReg();
+        initNama();
+        resetData();
+      }
     }
 
     function login() {
